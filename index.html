@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hangman Play</h1><br><br>
+    <p>Gizlenmiş kelimeyi bulmak için harf giriniz</p>
+
+    <div class="container">
+        <svg height="250" width="250" class="graffic">
+            <!--SEHPA-->
+            <line x1="50"  y1="20"  x2="130"  y2="20"/>
+            <line x1="130"  y1="20"  x2="130"  y2="50"/>
+            <line x1="50"  y1="20"  x2="50"  y2="250"/>
+            <line x1="10"  y1="250"  x2="90"  y2="250"/>
+
+            <!--HEAD-->
+
+            <circle cx="130" cy="70" r="20" class="item"/>
+
+            <!--BODY-->
+
+            <line x1="130"  y1="90"  x2="130"  y2="170" class="item"/>
+
+            <!--ARMS-->
+            <line x1="130"  y1="120"  x2="100"  y2="150" class="item"/>
+            <line x1="130"  y1="120"  x2="160"  y2="150" class="item"/>
+
+            <!--LEGS-->
+            <line x1="130"  y1="170"  x2="100"  y2="200" class="item"/>
+            <line x1="130"  y1="170"  x2="160"  y2="200" class="item"/>
+
+            <ellipse cx="130" cy="50" rx="30" ry="50" style="stroke:purple;stroke-width:2" />
+
+
+
+        </svg>
+
+        <div id="wrong-letters">
+            
+        </div>
+
+        <div id="word">
+            
+
+        </div>
+    </div>
+
+    <div id="popup-container">
+        <div class="popup">
+            <h2 id="success-message">TEBRİKLER KAZANDINIZ!</h2>
+            <button id="play-again">TEKRAR OYNA</button>
+        </div>
+    </div>
+
+    <div id="message" class="">
+        <p>Letter was already added</p>
+    </div>
+
+    <script src="hangman.js"></script>
+</body>
+</html>
